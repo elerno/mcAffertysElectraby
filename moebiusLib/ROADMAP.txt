@@ -1,0 +1,63 @@
+ROADMAP
+=======
+
+
+- Stage 1
+	- Write documentation
+		- README (DONE ).
+		- ROADMAP (DONE).
+		- License (DONE).
+		- Coding conventions (ONGOING).
+	- Code moebiusLib.Progression() basic methods and (generated) attributes.
+		- Write an __init__() for the class. The init will invoke:
+			- code processInitialConditions() (DONE)
+			- code makeProgression() that will produce the tone progression. (DONE)
+			- code nonLoopingNLoopingSections(), which will determine if the
+				specific tone-row has a non-looping section. If so, make it
+				available to the class through  the
+				Progression.nonLoopingSection attribute. It will also determine
+				the tone-row's looping section, and make it available to
+				the class through  the Progression.loopingSection attribute. (DONE)
+- Stage 2
+	- Code moebiusLib.Progression() more sophisticaded methods
+		(and attributes?).
+		- code methods to generate the tone-row identities: retrograde, inverse
+			and inverse-retrograde. Implement in a separate (super?) class,
+			since the functionality has more general purpose applications. (DONE)
+	- Code moebiusLib.Matrix() basic methods and (generated) attributes.
+		- use moebiusLib.Progression() as super-class for Matrix() (Done)
+		- Code makeTranspositionMatrix() which will construct a transposition
+			matrix with the inverse tone-row as first notes for the subsequent
+			transpositions. (DONE)
+		- Add keyword argument to __init__() so that the
+			originating tone-row can be an identity of Progression.complete.
+		- Code makeInverseMatrix() which will construct a transposition
+			matrix with the inverse tone-row as first notes for the subsequent
+			transpositions. (DONE)
+			- Add keyword argument to __init__ so that the matrix is generated
+				from series identities. Originating Identities should also be
+				possible. (DONE)
+- Stage 3
+	- Review the code (MOSTLY DONE)
+		- Optimize if necessary.
+		- Polish docstrings and comments if necessary.
+	- Write any missing documentation.
+- Stage 4 (wishlist)
+	- Add methods to identify symetry and inversion axises in 
+				Matrix.matrix.
+	- Code moebiusLib.Progression() experimental methods (and attributes?).
+		- add optional arguments to makeProgression() or __init__ in order to
+			experiment with different modulos and/or constants in the iterated
+			function (2x = y).
+		- make experimental methods in order to iterate different formulae?
+		- implement modular systems other than Twelve-tone equal temperament
+			(TET).
+	- Code moebiusLib.Matrix() more methods (and attributes?).
+		- Add methods to retrieve basic statistical data from the generated Matrix
+		(pitch mean, median and mode)
+	- Code moebiusLib.Harmnoy() basic methods and (generated) attributes.
+- Stage 5
+	- Review the code
+		- Optimize if necessary.
+		- Polish docstrings and comments if necessary.
+	- Write any missing documentation.
